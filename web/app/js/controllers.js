@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', ['myApp.service.login', 'firebase'])
+angular.module('myApp.controllers', ['myApp.service.login', 'firebase', 'leaflet-directive'])
    .controller('HomeCtrl', ['$scope', 'syncData', function($scope, syncData) {
       syncData('syncedValue').$bind($scope, 'syncedValue');
    }])
@@ -131,4 +131,33 @@ console.log($scope.messages);
 		 // $scope.users = $firebase(usersRef);
 		 // console.log($scope.users);
 		//debugger;
-   }]);
+   }])
+    .controller('TripMapController', [ '$scope', function($scope) {
+        angular.extend($scope, {
+            center: {
+                autoDiscover: true,
+                zoom: 16
+            },
+//            markers: {
+//                start: {
+//                    lat: 40,
+//                    lng: -74,
+//                    title: 'start'
+//                }
+//            },
+            markers: new Array(),
+            events: {}
+        });
+
+        $scope.$on("leafletDirectiveMap.click", function(event, args){
+            var leafEvent = args.leafletEvent;
+
+            $scope.markers.push({
+                lat: leafEvent.latlng.lat,
+                lng: leafEvent.latlng.lng,
+                message: "Marker Added"
+            });
+        });
+
+
+    }]);

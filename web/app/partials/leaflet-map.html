@@ -1,0 +1,17 @@
+
+<style>
+    input {
+        width: 100px;
+        margin-right: 7px;
+    }
+</style>
+
+<h1>Trip Planner</h1>
+<form>
+    Latitude : <input type="number" step="any" ng-model="center.lat" />
+    Longitude : <input type="number" step="any" ng-model="center.lng" />
+    Zoom : <input type="number" step="any" ng-model="center.zoom" />
+    <button ng-click="center.autoDiscover = true" />Discover position</button>
+</form>
+<leaflet center="center"  markers="markers" event-broadcast="events" width="640" height="400"></leaflet>
+

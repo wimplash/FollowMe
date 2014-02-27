@@ -25,11 +25,17 @@ angular.module('myApp.routes', ['ngRoute'])
          templateUrl: 'partials/login.html',
          controller: 'LoginCtrl'
       });
-	  
+
 	  $routeProvider.when('/usmap', {
          templateUrl: 'partials/USMap.html',
          controller: 'MapController'
       });
 
-      $routeProvider.otherwise({redirectTo: '/home'});
+        $routeProvider.when('/tripmap', {
+            templateUrl: 'partials/leaflet-map.html',
+            controller: 'TripMapController'
+        });
+
+
+        $routeProvider.otherwise({redirectTo: '/home'});
    }]);
