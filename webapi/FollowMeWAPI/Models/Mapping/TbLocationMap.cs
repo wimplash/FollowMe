@@ -22,6 +22,10 @@ namespace FollowMeWAPI.Models.Mapping
             this.Property(t => t.locID).HasColumnName("locID");
             this.Property(t => t.locATID).HasColumnName("locATID");
             this.Property(t => t.locPoint).HasColumnName("locPoint");
+            this.Property(t => t.locSet).HasColumnName("locSet");
+            this.Property(t => t.locLong).HasColumnName("locLong");
+            this.Property(t => t.locLat).HasColumnName("locLat");
+            this.Property(t => t.userID).HasColumnName("userID");
         }
     }
 }
