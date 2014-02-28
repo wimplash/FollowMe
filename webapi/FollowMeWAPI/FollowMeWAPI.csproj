@@ -135,6 +135,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ActiveTripController.cs" />
+    <Compile Include="Controllers\CurrentLocationController.cs" />
     <Compile Include="Controllers\PlannedTripController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TripTemplateController.cs" />
