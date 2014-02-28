@@ -10,5 +10,6 @@ namespace FollowMeWAPI.Models
         public string uLastName { get; set; }
         public string uEmail { get; set; }
         public string uPWD { get; set; }
+        public string uImag { get; set; }
     }
 }

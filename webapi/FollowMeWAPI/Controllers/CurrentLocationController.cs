@@ -27,7 +27,7 @@ namespace FollowMeWAPI.Controllers
                                                 {
                                                     userName = u.uFirstName + " " + u.uLastName,
                                                     userEmail = u.uEmail,
-                                                    userImgUrl = "",
+                                                    userImgUrl = u.uImag,
                                                     latitude = c.locLat,
                                                     longtitude = c.locLong
 
