@@ -15,6 +15,7 @@ CREATE TABLE [dbo].[TbPointOfInterest](
 	[poiID] [int] NOT NULL,
 	[poiTID] [int] NULL,
 	[poiPlaceName] [varchar](50) NULL,
+	[poiPlaceDesc] nvarchar(2000) NULL,
 	[poiLong] [nvarchar](50) NULL,
 	[poiLat] [nvarchar](50) NULL,
  CONSTRAINT [PK_TbPointOfInterest] PRIMARY KEY CLUSTERED 

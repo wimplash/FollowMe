@@ -14,9 +14,14 @@ CREATE TABLE [dbo].[TbTemplates](
 	[tID] [int] NOT NULL,
 	[tName] [nvarchar](50) NULL,
 	[tDesc] [nvarchar](200) NULL,
- CONSTRAINT [PK_TbTemplates] PRIMARY KEY CLUSTERED ([tID] ASC)
-)
-
+	[tLtartLatitude] [nvarchar](50) NULL,
+	[tStartLongitude] [nvarchar](50) NULL,
+	[tEndLatitud] [nvarchar](50) NULL,
+	[tEndLongitude] [nvarchar](50) NULL,
+ CONSTRAINT [PK_TbTemplates] PRIMARY KEY CLUSTERED 
+(
+	[tID] ASC
+))
 
 
 CREATE TABLE [dbo].[TbPointOfInterest](
@@ -25,6 +30,7 @@ CREATE TABLE [dbo].[TbPointOfInterest](
 	[poiPlaceName] [varchar](50) NULL,
 	[poiLong] [nvarchar](50) NULL,
 	[poiLat] [nvarchar](50) NULL,
+	[poiInterestSeq] int,
  CONSTRAINT [PK_TbPointOfInterest] PRIMARY KEY CLUSTERED 
 (
 	[poiID] ASC
