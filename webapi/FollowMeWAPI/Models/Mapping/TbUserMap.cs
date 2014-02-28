@@ -26,6 +26,9 @@ namespace FollowMeWAPI.Models.Mapping
             this.Property(t => t.uPWD)
                 .HasMaxLength(50);
 
+            this.Property(t => t.uImag)
+                .HasMaxLength(2000);
+
             // Table & Column Mappings
             this.ToTable("TbUsers");
             this.Property(t => t.uID).HasColumnName("uID");
@@ -33,6 +36,7 @@ namespace FollowMeWAPI.Models.Mapping
             this.Property(t => t.uLastName).HasColumnName("uLastName");
             this.Property(t => t.uEmail).HasColumnName("uEmail");
             this.Property(t => t.uPWD).HasColumnName("uPWD");
+            this.Property(t => t.uImag).HasColumnName("uImag");
         }
     }
 }
