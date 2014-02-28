@@ -57,3 +57,7 @@ C:\Users\ilevina\Documents\GitHub\FollowMe\webapi\FollowMeWAPI\bin\System.Web.We
 C:\Users\ilevina\Documents\GitHub\FollowMe\webapi\FollowMeWAPI\bin\System.Web.WebPages.Deployment.xml
 C:\Users\ilevina\Documents\GitHub\FollowMe\webapi\FollowMeWAPI\bin\System.Web.WebPages.Razor.xml
 C:\Users\ilevina\Documents\GitHub\FollowMe\webapi\FollowMeWAPI\obj\Debug\FollowMeWAPI.pdb
+C:\Users\ilevina\Documents\GitHub\FollowMe\webapi\FollowMeWAPI\bin\Newtonsoft.Json.dll
+C:\Users\ilevina\Documents\GitHub\FollowMe\webapi\FollowMeWAPI\bin\System.Web.Cors.dll
+C:\Users\ilevina\Documents\GitHub\FollowMe\webapi\FollowMeWAPI\bin\System.Web.Http.Cors.dll
+C:\Users\ilevina\Documents\GitHub\FollowMe\webapi\FollowMeWAPI\bin\System.Web.Http.Cors.xml

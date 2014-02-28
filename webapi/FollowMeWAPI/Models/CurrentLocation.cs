@@ -7,5 +7,6 @@ namespace FollowMeWAPI.Models
 {
     public class CurrentLocation
     {
+
     }
 }

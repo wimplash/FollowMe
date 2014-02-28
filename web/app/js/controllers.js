@@ -146,17 +146,21 @@ console.log($scope.messages);
 		if ($rootScope.currentUser )
 				$rootScope.currentUser = { id: 168, name: 'Chsieh' }
 		$scope.isCollapsed = false;
-		$scope.activeTrips = 
-						 [
-							 {							
-							 tripName: 'Joes Biker Trip',
-							 status: 0  // Not accept
-							},
-							 {
-							 tripName: 'John West Side Trip',
-							 status: 1 // accepted
-							 }
-						   ]
+		
+			 webAPI.fetchPromise('get', 'activetrip?userid=5', null, function(response) {
+													 if (response && respone.data)
+														 $scope.activeTrips = response.data;
+												});
+						  // $scope.activeTrips =[
+							  // {							
+							  // tripName: 'Joes Biker Trip',
+							  // status: 0  // Not accept
+							// },
+							  // {
+							  // tripName: 'John West Side Trip',
+							  // status: 1 // accepted
+							  // }
+						    // ]
 						  
 		$scope.planTrips = [
 							{							
