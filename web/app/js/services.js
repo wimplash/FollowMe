@@ -4,7 +4,29 @@
    /* Services */
 
    angular.module('myApp.services', ['myApp.service.login', 'myApp.service.firebase'])
+	.factory('webAPI', ['$http', '$rootScope', '$timeout', function ($http, $rootScope, $timeout) {
+		var defaultServerPath = 'http://dmgt-followme.azurewebsites.net/api/';
+		
+		var WebAPI = function () {
+			this.serverPath = defaultServerPath;
+		};
+		
+		var defaultErrorHandler = function() {}
+		
+		WebAPI.prototype.fetchPromise = function (serviceType, serviceURL, serviceData, successCallback, errorCallback, serviceParam) {
+			var outer = this;
+			outer.successFunc = successCallback;
+			outer.failFunc = errorCallback || defaultErrorHandler;
+			outer.serviceFullPath = outer.serverPath + serviceURL;
+			return $http({ method: serviceType, url: outer.serviceFullPath, data: serviceData, params: serviceParam, headers:{
+                'Access-Control-Allow-Origin': '*'}               
+             })
+				.then(outer.successFunc, outer.failFunc)
+		};
 
+		var proxy = new WebAPI();
+		return proxy;
+	}])
       // put your services here!
       // .service('serviceName', ['dependency', function(dependency) {}]);
 	 .factory('d3Service', ['$document', '$q', '$rootScope',

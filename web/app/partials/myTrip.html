@@ -1,0 +1,81 @@
+<div>
+	<div ng-switch="activeTrips">
+		<div class="panel panel-default">
+		  <!-- Default panel contents -->
+		  <div class="panel-heading">My Trips</div>
+		  <div class="panel-body">
+			 <ul class="list-group" ng-repeat="trip in activeTrips | orderByPriority">
+				 <li class="list-group-item" ng-show='trip.status == 0'>
+					<span class='glyphicon glyphicon-ok'></span>
+					<span class='glyphicon glyphicon-remove'></span>	
+					{{trip.tripName}}
+				 </li>
+				 <li class="list-group-item" ng-show='trip.status == 1'>
+					<a ng-href='#/tripMap' class="btn btn-default">Started</a>	
+					<span class='glyphicon glyphicon-remove'></span>	
+					{{trip.tripName}}
+				 </li>	
+			 </ul>
+		  </div>
+		</div>
+		
+		<div class="panel panel-default">
+		  <!-- Default panel contents -->
+		  <div class="panel-heading">My Planned Trips</div>
+		  <div class="panel-body">
+			 <ul class="list-group" ng-repeat="pt in planTrips | orderByPriority">
+				 <li class="list-group-item">
+					{{pt.name}} <a ng-click="isCollapsed = !isCollapsed">[More]</a>
+					<span class="badge">({{pt.tripCount}})</span>					
+					<div ng-show="isCollapsed">
+						<div class="well well-lg">{{pt.description}}</div> 
+					</div>
+					<div><Label>Start Date:</label>{{pt.startDate}}</div>
+				 </li>				 
+			 </ul>
+		  </div>
+		</div>
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<span class='glyphicon glyphicon-plus' ng-click="open()"></span>			
+			<!-- <div ng-show="selected">Selection from a modal: {{ selected }}</div> -->
+			Plan a trip
+		  </div>		  
+		</div>
+		
+		<script type="text/ng-template" id="myModalContent.html">
+			<div class="modal-header">
+				<h3>New Plan Trip</h3>
+			</div>
+			<div class="modal-body">
+				<form name="myForm">
+					<div class="panel panel-default">
+					  <!-- Default panel contents -->
+					  <div class="panel-heading">Trip Template</div>
+					  <div class="panel-body">
+						 <div ng-repeat="t in items">							
+							<input type="radio" name="tripGroup" ng-model="currentTemplate" value="{{t.id}}" ng-click="getCurrent(t);">  {{t.name}}							
+						 </div>
+					  </div>
+					</div>
+					
+					<div class="panel panel-default">
+					  <!-- Default panel contents -->
+					  <div class="panel-heading">Cool Friends</div>
+					  <div class="panel-body">						
+						<p>
+							<input type="text" ng-model="selected" typeahead="invite as invite.name for invite in invitees | filter:{name:$viewValue}" class="form-control">
+						</p>	
+						<button ng-click='addFriend(selected.name);'>Add</button>  <span>{{addedFriend}}</span>
+					  </div>
+					</div>
+				</form>	
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" ng-click="ok()">Save</button>
+				<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+			</div>
+		</script>
+	</div>
+</div>

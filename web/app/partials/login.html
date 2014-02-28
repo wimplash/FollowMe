@@ -1,24 +1,19 @@
 
-<h2>Login Page</h2>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">User Login</div>
+  <div class="panel-body">						
+	<form class="navbar-form navbar-left" role="search">
+	  <div class="form-group">		
+		<label>Email:</label>
+		<input type="text" class="form-control" ng-model="email" />
+		&nbsp;&nbsp;&nbsp;
+		<label>Password:</label>
+		<input type="password" class="form-control"  ng-model="pass" />	
+	  </div>	
+		&nbsp;&nbsp;<button ng-click="login()" class="btn btn-default">Log In</button>	
 
-<form>
-    <label>
-        <span>email</span>
-        <input type="text" ng-model="email" />
-    </label>
-    <label>
-        <span>password</span>
-        <input type="password" ng-model="pass" />
-    </label>
-    <label ng-cloak ng-show="createMode">
-        <span>confirm pass</span>
-        <input type="password" ng-model="confirm" />
-    </label>
-    <button ng-click="login()" ng-hide="createMode">Log In</button>
-    <button ng-click="createMode = true" ng-hide="createMode">Register</button>
-    <button ng-cloak ng-show="createMode" ng-click="createAccount()">Create Account</button>
-    <button ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>
-
-    <p ng-show="err" class="error">{{err}}</p>
-</form>
-
+	  
+	</form>
+  </div>
+</div>

@@ -6,8 +6,8 @@ angular.module('myApp.routes', ['ngRoute'])
    // which should only be available while logged in
    .config(['$routeProvider', function($routeProvider) {
       $routeProvider.when('/home', {
-         templateUrl: 'partials/home.html',
-         controller: 'HomeCtrl'
+         templateUrl: 'partials/login.html',
+         controller: 'LoginCtrl'
       });
 
       $routeProvider.when('/chat', {
@@ -25,17 +25,21 @@ angular.module('myApp.routes', ['ngRoute'])
          templateUrl: 'partials/login.html',
          controller: 'LoginCtrl'
       });
-
+	  
 	  $routeProvider.when('/usmap', {
          templateUrl: 'partials/USMap.html',
          controller: 'MapController'
       });
-
-        $routeProvider.when('/tripmap', {
-            templateUrl: 'partials/leaflet-map.html',
-            controller: 'TripMapController'
-        });
-
-
-        $routeProvider.otherwise({redirectTo: '/home'});
+	  
+	  $routeProvider.when('/myTrip', {
+         templateUrl: 'partials/MyTrip.html',
+         controller: 'MyTripController'
+      });
+	  
+	  $routeProvider.when('/tripMap', {
+         templateUrl: 'partials/tripMap.html',
+         controller: 'tripMapController'
+      });
+	  
+      $routeProvider.otherwise({redirectTo: '/home'});
    }]);
