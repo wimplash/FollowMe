@@ -30,3 +30,5 @@ C:\Users\ilevina\documents\visual studio 2012\Projects\FollowMeWAPI\FollowMeWAPI
 C:\Users\ilevina\documents\visual studio 2012\Projects\FollowMeWAPI\FollowMeWAPI\bin\System.Web.WebPages.Razor.xml
 C:\Users\ilevina\documents\visual studio 2012\Projects\FollowMeWAPI\FollowMeWAPI\obj\Debug\FollowMeWAPI.dll
 C:\Users\ilevina\documents\visual studio 2012\Projects\FollowMeWAPI\FollowMeWAPI\obj\Debug\FollowMeWAPI.pdb
+C:\Users\ilevina\Documents\GitHub\FollowMe\webapi\FollowMeWAPI\obj\Debug\FollowMeWAPI.csprojResolveAssemblyReference.cache
+C:\Users\ilevina\Documents\GitHub\FollowMe\webapi\FollowMeWAPI\obj\Debug\FollowMeWAPI.dll

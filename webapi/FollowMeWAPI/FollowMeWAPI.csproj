@@ -125,6 +125,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ActiveTripController.cs" />
+    <Compile Include="Controllers\PlannedTripController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TripTemplateController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -132,6 +133,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ActiveTrip.cs" />
+    <Compile Include="Models\AllowCrossSiteJsonAttribute .cs" />
     <Compile Include="Models\CurrentLocation.cs" />
     <Compile Include="Models\dmgtfollowmeContext.cs" />
     <Compile Include="Models\Mapping\TbActiveTripMap.cs" />

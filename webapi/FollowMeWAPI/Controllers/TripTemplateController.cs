@@ -12,6 +12,7 @@ using FollowMeWAPI.Models;
 
 namespace FollowMeWAPI.Controllers
 {
+    [AllowCrossSiteJsonAttribute]
     public class TripTemplateController : ApiController
     {
         private dmgtfollowmeContext db = new dmgtfollowmeContext();

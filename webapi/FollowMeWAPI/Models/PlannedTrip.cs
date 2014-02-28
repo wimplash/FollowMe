@@ -7,6 +7,9 @@ namespace FollowMeWAPI.Models
 {
     public class PlannedTrip
     {
+        public int id { get; set; }
+        public int? templateId { get; set; }
+        public IQueryable<User> users { get; set; }
 
     }
 }
