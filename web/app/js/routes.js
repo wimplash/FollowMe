@@ -35,11 +35,16 @@ angular.module('myApp.routes', ['ngRoute'])
          templateUrl: 'partials/MyTrip.html',
          controller: 'MyTripController'
       });
-	  
-	  $routeProvider.when('/tripMap', {
-         templateUrl: 'partials/tripMap.html',
-         controller: 'tripMapController'
-      });
-	  
-      $routeProvider.otherwise({redirectTo: '/home'});
+
+        $routeProvider.when('/tripMapPlaceholder', {
+            templateUrl: 'partials/tripMap.html',
+            controller: 'tripMapController'
+        });
+
+        $routeProvider.when('/tripMap', {
+            templateUrl: 'partials/leaflet-map.html',
+            controller: 'tripMapLeafController'
+        });
+
+        $routeProvider.otherwise({redirectTo: '/home'});
    }]);
