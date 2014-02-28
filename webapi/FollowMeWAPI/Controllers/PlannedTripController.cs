@@ -59,7 +59,7 @@ namespace FollowMeWAPI.Controllers
                 {
                     ptID = plannedTrip.id,
                     ptTID = plannedTrip.templateId,
-                    ptUID = plannedTrip.users.
+                    //ptUID = plannedTrip.users.
                 };
 
                 db.Entry(tbplannedtrip).State = EntityState.Modified;
