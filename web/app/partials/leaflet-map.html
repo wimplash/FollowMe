@@ -14,18 +14,28 @@
     }
 </style>
 
-<h1>Trip Planner</h1>
+<h1>My Active Trip</h1>
 <form>
-    Latitude : <input type="number" step="any" ng-model="center.lat" />
-    Longitude : <input type="number" step="any" ng-model="center.lng" />
-    Zoom : <input type="number" step="any" ng-model="center.zoom" />
-    <button ng-click="center.autoDiscover = true" />Discover position</button>
-    Event: <strong ng-bind="eventDetected"></strong>
-    <br>
-    <button >Gas</button>
-    <div ng-model="markers"></div>
+    <!--Latitude : <input type="number" step="any" ng-model="center.lat" />-->
+    <!--Longitude : <input type="number" step="any" ng-model="center.lng" />-->
+    <!--Zoom : <input type="number" step="any" ng-model="center.zoom" />-->
+    <!--<button ng-click="center.autoDiscover = true" />Discover position</button>-->
+    <!--Event: <strong ng-bind="eventDetected"></strong>-->
+    <!--<br>-->
+    <!--<button >Gas</button>-->
+    <!--<div ng-model="markers"></div>-->
 
+    <fieldset>
+        <label>Estimated arrival: 1hr 20min</label>
+    </fieldset>
+    <select>
+        <option value="1">1 - Stopping for Gas</option>
+        <option value="2">2 - Stopping for Food</option>
+        <option value="3">3 - Need to go back</option>
+        <option value="4">4 - Cancelling</option>
+    </select>
 </form>
+        <br>
 <leaflet center="center"  markers="markers" event-broadcast="events" width="640" height="400"></leaflet>
 
 <!--<button id="start" >Messages</button>-->
