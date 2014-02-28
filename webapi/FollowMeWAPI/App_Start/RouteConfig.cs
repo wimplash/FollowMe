@@ -13,6 +13,8 @@ namespace FollowMeWAPI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.IgnoreRoute("{*staticfiles}", new { staticfiles = @".*\.(css|js|gif|png|jpg)(/.*)?" })
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
